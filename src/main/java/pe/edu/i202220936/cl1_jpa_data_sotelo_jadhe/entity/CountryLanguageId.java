@@ -7,16 +7,13 @@ public class CountryLanguageId implements Serializable {
     private String countryCode;
     private String language;
 
-    // Constructor sin argumentos
     public CountryLanguageId() {}
 
-    // Constructor con argumentos
     public CountryLanguageId(String countryCode, String language) {
         this.countryCode = countryCode;
         this.language = language;
     }
 
-    // Getters y Setters
     public String getCountryCode() {
         return countryCode;
     }
@@ -33,7 +30,6 @@ public class CountryLanguageId implements Serializable {
         this.language = language;
     }
 
-    // equals() y hashCode() (Obligatorios para claves compuestas)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

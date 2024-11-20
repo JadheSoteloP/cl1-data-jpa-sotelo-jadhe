@@ -11,18 +11,18 @@ import lombok.*;
 @ToString
 @Table(name = "countrylanguage")
 @IdClass(CountryLanguageId.class)
+
 public class CountryLanguage {
-    @Id
-    @Column(name = "CountryCode")
-    private String countryCode;
-    @Id
-    private String language;
-    private String isOfficial;
-    private Double percentage;
 
-    @ManyToOne
-    @JoinColumn(name = "CountryCode", insertable = false, updatable = false)
-    private Country country;
+        @Id
+        private String countryCode;
+        @Id
+        private String language;
+        private String isOfficial;
+        private Integer percentage;
 
+        @ManyToOne
+        @JoinColumn(name = "countryCode", insertable = false, updatable = false)
+        private Country country;
 
 }
